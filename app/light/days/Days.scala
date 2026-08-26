@@ -5,8 +5,6 @@ import light.pages.AssetDir
 import play.api.mvc.*
 import play.twirl.api.Html
 
-import java.time.LocalDate
-
 trait Days:
   val stories: Seq[Story] = Stories.stories
   val people: Seq[Person] = People.people
@@ -32,15 +30,6 @@ object Days extends Days with AssetDir:
     }
 
   val sortedDays: Seq[DayRecord] = records.filter(_.dateKey.nonEmpty).sortBy(_.dateKey.get)
-
-  def currentDays: Seq[DayRecord] =
-    val end: Seq[DayRecord] =
-      sortedDays
-        .filter(_.dates.nonEmpty)
-        .takeWhile(_.dates.head.getDayOfYear < LocalDate.now.getDayOfYear)
-    end.length - 1 match
-      case i if i >= 0 => sortedDays.drop(i) ++ end.take(i)
-      case _ => sortedDays.drop(sortedDays.length - 1) ++ sortedDays.take(sortedDays.length - 1)
 
   def day(key: String): DayRecord = recordByKey(key)
 

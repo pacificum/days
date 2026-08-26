@@ -1,4 +1,5 @@
 @import lib._
+@import play.api.libs.json._
 
 @table(classExt="indent") {
   @iconrow(humanity_icon()) {
@@ -7,15 +8,22 @@
   }
 }
 
-@table(classExt="ms-5") {
-  @for(day <- Days.currentDays){
+<div data-days-container="rotate">
+  <div class="d-table ms-5" data-days-list></div>
+
+  <template data-days-row-template>
     @iconrow(dove_icon()) {
-    @if(day.isToday){<strong>}
-      @link(day.href, day.dayTitle)@if(day.desc.nonEmpty){ (@day.desc)}
-      @if(!day.isToday){<strong>}
-      — <span class="text-nowrap">@day.ageStr</span>
-      @if(!day.isToday){</strong>}
-    @if(day.isToday){</strong>}
-  }
-}
-}
+      <span class="day-title"><a href="#" class="dotted"></a><span class="day-desc"></span></span><span class="age-wrap"> — <strong class="text-nowrap age-str"></strong></span>
+    }
+  </template>
+
+  <script type="application/json" data-days-records>@Html(Json.stringify(JsArray(Days.sortedDays.map { day =>
+    Json.obj(
+      "href" -> day.href,
+      "title" -> day.dayTitle,
+      "desc" -> day.desc,
+      "dates" -> day.dates.map(_.toString),
+      "year" -> day.yearOpt
+    )
+  })).replace("</", "<\\/"))</script>
+</div>
