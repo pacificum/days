@@ -4,7 +4,7 @@
   width: Int = 0,
   height: Int = 0
 )
-<img src="@Files.at(dir, fname)" class="@{
+<img src="@Files.image(dir, fname)" class="@{
     val presets = "img-responsive center-block img-fluid mx-auto d-block"
     style match {
       case ImgStyle.Wide => presets

@@ -31,9 +31,8 @@ class AppRoutes @Inject()(mcc: MessagesControllerComponents)
   }
 
   def asset(location: String): Action[AnyContent] = Action {
-    val fullPath = s"${Files.legacyStorageUrl}/$location"
+    val fullPath = Files.assetAt(location)
     log.info(s"Looking for an asset with full path: $fullPath")
-    //assets.versioned(fullPath)
     Redirect(fullPath)
   }
 

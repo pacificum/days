@@ -1,13 +1,14 @@
 package light.days
 
 import controllers.routes.AppRoutes
+import light.pages.AssetDir
 import light.util.DaysHelper
 import play.api.mvc.Call
 import play.twirl.api.Html
 
 import java.time.LocalDate
 
-trait DayRecord:
+trait DayRecord extends AssetDir:
   def key: String
   def dayTitle: String
   def name: String
@@ -17,6 +18,7 @@ trait DayRecord:
   def content: Html
   def route: Call = AppRoutes.storiesRecord(key)
   def href: String = route.url
+  override def assetDir: String = s"${Days.assetDir}/$key"
   def hasDate: Boolean = dates.nonEmpty
   def isToday: Boolean = DayRecord.isToday(dates)
   def dateKey: Option[String] = DayRecord.dateKey(key, dates)

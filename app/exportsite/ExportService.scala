@@ -223,6 +223,9 @@ class ExportService @Inject()(
       // Copy icons
       copyDirectory(publicDir.resolve("icons"), assetsDir.resolve("icons"))
 
+      // Copy images
+      copyDirectory(publicDir.resolve("content"), assetsDir.resolve("content"))
+
       // Copy any other static files
       Files.list(publicDir)
         .filter(Files.isRegularFile(_))
