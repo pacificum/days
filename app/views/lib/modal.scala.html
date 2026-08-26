@@ -1,0 +1,24 @@
+@(id: String, title: String, btnHref: String = "", btnLabel: String = "", wide: Boolean = false)(content: Html)
+
+<section id="@id" class="modal fade" tabindex="-1" role="dialog"  aria-labelledby="@{id}Label" aria-hidden="true">
+<div class="modal-dialog @if(wide){modal-lg}">
+<div class="modal-content">
+<div class="modal-header">
+  <h3 class="modal-title" id="@{id}Label">@title</h3>
+  <button type="button" class="btn-close close" data-dismiss="modal" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+@content
+</div>
+<div class="modal-footer">
+  @if(btnHref != "") {
+  <a href="@btnHref" @if(!btnHref.startsWith("#")) { target="_blank"} class="btn btn-default">@btnLabel</a>
+  }
+  <button type="button" class="btn btn-primary " data-dismiss="modal" data-bs-dismiss="modal">Закрыть</button>
+</div>
+</div>
+</div>
+</section>
+<script  type="text/javascript">
+initModal("#@id")
+</script>

@@ -1,0 +1,17 @@
+@import lib._
+
+@table() {
+  @iconrow(humanity_icon()) {
+    <strong id="years">Истории,</strong> которые нас вдохновляют
+  }
+}
+
+@table(classExt="ms-5") {
+  @for(record <- Days.records.filterNot(_.hasDate)) {
+    @iconrow(dove_icon()) {
+      @link(record.href, record.dayTitle)@if(record.desc.nonEmpty){
+        (@record.desc)}@if(record.ageStr.nonEmpty){
+        <strong> — @record.ageStr</strong>}
+    }
+  }
+}

@@ -1,0 +1,439 @@
+:root {
+--headtext: #ff7a01; /* #FF4F00;  //rgba(255, 89, 0, 1) */
+--lightext: #ff7a01; /* light #F39814; //rgba(243, 152, 20, 1) //logo #FD7B33; */
+--linktext: #ff7a01;
+--linkhover: #FF4F00;
+--icontext: #ff7a01; /* rgb(255, 136, 1) */
+--selection: #FECA40; /* rgba(254, 202, 64, 1) */
+--highlight: #ffea80;
+--seltext: #FFFFFF;
+--foretext: #000000;
+--extext: #337ab7; /* #337ab7; //#145bf3; */
+--exthover: #FF4F00;
+--imagtext: #8e4f98;
+}
+
+@font-face {
+  font-family: "NeuchaRegular";
+  src: url("../webfonts/NeuchaRegular/NeuchaRegular.eot");
+  src: url("../webfonts/NeuchaRegular/NeuchaRegular.eot?#iefix") format("embedded-opentype"),
+  url("../webfonts/NeuchaRegular/NeuchaRegular.woff") format("woff"),
+  url("../webfonts/NeuchaRegular/NeuchaRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Futura PT Book';
+    src: url('../webfonts/FuturaPT/FuturaPT-Book.eot');
+    src: local('Futura PT'), local('FuturaPT'), local('Futura PT Book'), local('FuturaPT-Book'),
+        url('../webfonts/FuturaPT/FuturaPT-Book.eot?#iefix') format('embedded-opentype'),
+        url('../webfonts/FuturaPT/FuturaPT-Book.woff') format('woff'),
+        url('../webfonts/FuturaPT/FuturaPT-Book.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body { font-family: 'Futura PT Book', sans-serif; }
+body::selection { background: var(--selection); }
+body::-moz-selection { background: var(--selection); }
+
+.strong, strong {
+  text-shadow: 1px 1px 7px rgb(255, 136, 1); /* rgb(255, 89, 0, 1); */
+  font-weight: normal;
+}
+
+code {
+  color: var(--headtext);
+  font-size: 75%;
+}
+
+.lightext { color: var(--lightext); }
+.linktext { color: var(--linktext); }
+
+.headtext {
+  color: var(--headtext);
+  font-weight: bold;
+}
+
+h1, h2, h3, h4 {
+  color: var(--headtext);
+  font-family: 'Futura PT Book', sans-serif;
+}
+
+h1.main-page { margin-top: -15px; }
+h1.small { font-size: 25px; }
+h3.small { font-size: 85%; }
+h4 { font-size: 28px;}
+
+h2.lined {
+  border-bottom: 1px solid var(--headtext);
+  margin-bottom: 20px;
+}
+
+.neucha { font-family: "NeuchaRegular";}
+.futura { font-family: 'Futura PT Book'; }
+
+h1.neucha {
+  font-size: 4em;
+  text-align: center;
+  display: block;
+/*   text-shadow: 1px 1px 7px rgb(243, 236, 3); */
+}
+
+h2.neucha {
+  font-size: 3em;
+  text-align: center;
+  display: block;
+/*   text-shadow: 1px 1px 7px rgb(243, 236, 3); */
+}
+
+h3.neucha {
+  font-size: 2em;
+/*   text-shadow: 1px 1px 7px rgb(243, 236, 3); */
+}
+
+/* subheader for the site name */
+
+.sub-header, .sub-header-lights {
+  font-family: "Futura PT Book";
+  font-size: 20px;
+  text-align: center;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+a { text-decoration: none; }
+a, a:active, a:focus {
+  color: var(--linktext);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--linkhover);
+  text-decoration: none;
+}
+a.icontext { color: var(--icontext); }
+a.headtext {
+  color: var(--headtext);
+  text-decoration: none;
+}
+a.ext, a .ext { color: var(--extext); }
+a.ext:hover, a:hover .ext { color: var(--exthover); }
+
+a.underline, a.underline:hover, a.underline:active, a.underline:focus, a .underline {
+  text-decoration: underline;
+}
+
+a.dotted, a.dotted:hover, a.dotted:active, a.dotted:focus, a .dotted {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}
+
+a.nounderline, a.nounderline:hover, a.nounderline:active, a.nounderline:focus, a .nounderline {
+  text-decoration: none;
+}
+
+a.hoverline { text-decoration: none; }
+
+a.hoverline:hover, a.hoverline:active, a.hoverline:focus {
+  text-decoration: underline;
+}
+
+.largeicon {
+  width: 32px;
+  height: 32px;
+}
+
+.smallicon {
+  width: 23px;
+  height: 23px;
+}
+
+.glyphicon {
+  font-size: 23px;
+}
+
+.leftN, img.left, div.left, a.left { clear: both; }
+img.right, a.right, div.right { clear: both; }
+
+.indent { padding-top: 40px; }
+
+.indent-middle {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.header-top {
+  margin-top: 0.5em;
+}
+
+.caption-top {
+  margin-top: 1.25em;
+}
+
+.paragraph {
+  margin-top: 1.5em;
+}
+
+.image-top {
+  margin-top: 1.25em;
+}
+
+.image-bottom {
+  margin-bottom: 1.25em;
+}
+
+.described-image-bottom {
+  margin-bottom: 0.4em;
+}
+
+.description-bottom {
+  margin-bottom: 1.2em;
+}
+
+.text-description {
+  font-size: 0.9em;
+}
+
+.sep, .dot {
+  color: var(--headtext);
+  margin: 0px 7px;
+  vertical-align: middle;
+}
+
+.dot { font-size: 20%; }
+
+/* menu */
+
+.menu ul {
+  margin: 0px;
+  padding: 0px 0px 5px 0px;
+  text-align: center;
+}
+
+.menu li {
+  display: inline-block;
+  list-style: none;
+  padding: 5px 0px 0px 5px;
+  margin: 0px 5px 0px 5px;
+  white-space: nowrap;
+}
+
+
+/* image thumbs */
+a:hover .blur, a:active .blur, a:focus .blur {
+  opacity: 0.75;
+}
+
+
+.intro {
+  margin-top: 20px;
+  font-style: italic;
+}
+
+ul { list-style: none; }
+ul.styled { list-style-type: square; }
+
+ul.bullet li:before {
+  content: '\2022';
+  display: block;
+  position: relative;
+  max-width: 0;
+  max-height: 0;
+  left: -35px;
+  top: 0;
+  color: var(--headtext);
+  font-size: 25px;
+}
+
+.bullet li { margin: .75em 0px; }
+
+/* currently used for quest detail page only */
+ol.nested > li {
+  font-weight: bold;
+}
+ol.nested > li .note {
+  font-weight: normal;
+  font-style: italic;
+}
+ol.nested ol li {
+  font-weight: normal;
+}
+ol.nested ul {
+  list-style-type: square;
+}
+
+@media(min-width: 300px) {
+  body { font-size: 16pt; }
+  h1 { font-size: 40px; }
+  h1.main-page { font-size: 42px; }
+  h1.long { font-size: 35px; }
+  h2 { font-size: 30px; }
+  h2.long { font-size: 20px; }
+  h2 small { font-size: 18px; }
+  h3 { font-size: 22px; }
+  h3.long { font-size: 19px; }
+  .responsive700 { width: 227px; }
+}
+
+@media(min-width: 450px) {
+  h1 { font-size: 50px; }
+  h1.main-page { font-size: 54px; }
+  h1.long { font-size: 35px; }
+  h2 { font-size: 40px; }
+  h2.long { font-size: 26px; }
+  h2 small { font-size: 18px; }
+  h3 { font-size: 26px; }
+  h3.long { font-size: 22px; }
+}
+
+@media(min-width: 610px) {
+  h1 { font-size: 65px; }
+  h1.main-page { font-size: 74px; }
+  h1.long { font-size: 40px; }
+  h2 { font-size: 48px; }
+  h2.long { font-size: 30px; }
+  h2 small { font-size: 22px; }
+  h3 { font-size: 36px; }
+  h3.long { font-size: 26px; }
+  .responsive700 { width: 295px; }
+}
+
+@media (min-width: 992px) {
+  .sub-header { letter-spacing: 6px; }
+  .sub-header-lights { letter-spacing: 15px; }
+  .responsive700 { width: 500px; }
+}
+
+@media (min-width: 1200px) {
+  .responsive700 { width: 650px; }
+}
+
+@media(max-width: 609px) {
+  .leftN, img.left, div.left, a.left {
+    float: none;
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 100%;
+  }
+
+  img.right, a.right, div.right {
+    float: none;
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 100%;
+  }
+}
+
+@media(min-width: 610px) {
+  .leftN, img.left, div.left, a.left { float: left; }
+
+  img.left, div.left {
+    margin: 5px 10px 25px 0px;
+  }
+
+  img.right, a.right, div.right { float: right; }
+
+  img.right, div.right {
+    margin: 5px 0px 5px 10px;
+  }
+}
+/* footer */
+
+footer.main {
+  border-top: 1px solid var(--headtext);
+  padding-top: 20px;
+  margin-bottom: 30px;
+}
+
+footer.main table.social { border: none; }
+
+footer.main table.social th, td {
+  padding: 5px 5px 5px 0px;
+}
+
+footer.main table.social td {
+  vertical-align: middle;
+}
+
+footer.main table.social th {
+  vertical-align: top;
+  white-space: nowrap;
+  font-weight: normal;
+}
+footer.main ul {
+  margin: 0px;
+  padding: 0px;
+}
+footer.main ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 0px 20px 10px 0px;
+  white-space: nowrap;
+}
+
+/* modalbox */
+.notelink {
+  border-radius: 4px;
+  padding: 1px 5px;
+  box-shadow:
+    inset 1px 0 var(--lightext),
+    inset 0 1px var(--lightext),
+    inset -1px 0 var(--lightext),
+    inset 0 -1px var(--lightext);
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+}
+
+blockquote {
+  position: relative;
+  border: none;
+  quotes: "\201C" "\201D";
+}
+
+blockquote cite:before {
+  font-size: 3em;
+  color: var(--headtext);
+  position: absolute;
+  content: open-quote;
+  left: -0.7em;
+  top: -0.25em;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+p.audio {
+  font-size: 125%;
+  line-height: 2;
+  color: var(--headtext);
+  font-weight: bold;
+}
+
+/* 'more' control & forms */
+
+.btn, input[type=submit], button {
+  border-color: var(--lightext);
+  display: inline-block;
+  text-decoration: none;
+  color: var(--foretext);
+  background: transparent;
+  font-size: 18px;
+}
+
+.btn-collapse, .btn-collapse:focus,
+.btn-primary, .btn-primary:focus,
+input[type=submit]:hover, input[type=submit]:focus {
+  border-color: var(--headtext);
+  background: var(--headtext);
+  color: #FFFFFF;
+}
+
+.btn-primary:hover {
+  border-color: var(--linkhover);
+  background: var(--linkhover);
+}
+
+.btn-collapse { width: 100%; }
+.btn-collapse .fa { margin-left: 10px; }

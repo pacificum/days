@@ -1,0 +1,4 @@
+@(ref: String, text: String = "вконтакте", big: Boolean = false, classExt: String = "underline")
+@lib.social {
+@iconlink(ref, text, classExt = s"ext $classExt", blank = true){<img src="@Files.icon("vk32.svg")" class="@if(big){largeicon}else{smallicon}">}
+}

@@ -1,0 +1,21 @@
+@import lib._
+
+@table(classExt="indent") {
+  @iconrow(humanity_icon()) {
+    <strong id="days">Герои и события</strong>, которые мы хотели бы помнить и которые для нас важнее
+    официальных дат
+  }
+}
+
+@table(classExt="ms-5") {
+  @for(day <- Days.currentDays){
+    @iconrow(dove_icon()) {
+    @if(day.isToday){<strong>}
+      @link(day.href, day.dayTitle)@if(day.desc.nonEmpty){ (@day.desc)}
+      @if(!day.isToday){<strong>}
+      — <span class="text-nowrap">@day.ageStr</span>
+      @if(!day.isToday){</strong>}
+    @if(day.isToday){</strong>}
+  }
+}
+}

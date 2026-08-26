@@ -1,0 +1,2 @@
+@(ref: String, text: String = "твиттер", big: Boolean = false, classExt: String = "underline")
+@iconlink(ref, text, classExt = s"ext $classExt", blank = true){<img src="@Files.icon("twitter32.svg")" class="@if(big){largeicon}else{smallicon}">}

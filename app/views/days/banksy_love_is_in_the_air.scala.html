@@ -1,0 +1,67 @@
+@(day: ArtWork)
+@import lib._, parts._
+
+@dayheadcontrol {
+  @image(Days, "banksy-love-is-in-the-air-2005.jpg")
+  <h2 class="text-center">@daytitle(day)</h2>
+}
+
+<p>
+  Одна из самых узнаваемых работ анонимного уличного художника <strong>Бэнкси</strong> —
+  мурал (граффити) <strong>«Любовь витает в воздухе».</strong>
+  Она также известна как <strong>«Метатель цветов»</strong>
+  и <strong>«Ярость»</strong> (<strong>«Love Is In The Air»,</strong>
+  <strong>«Flower Thrower»,</strong> <strong>«Rage»</strong>).
+</p>
+<p>
+  Впервые этот мурал появился в Лондоне в 2002 году, но самую известную его версию
+  Бэнкси выполнил в начале августа 2003 года в Вифлееме недалеко от
+  760-километровой стены, которая разделяет Палестину и Израиль.
+
+  На своем сайте он написал, что эта стена, по сути,
+  превращает Палестину в самую большую в мире открытую тюрьму.
+  И пошутил, что такая стена — идеальное место для отдыха художников граффити.
+</p>
+<p>
+  @image_described(Days, "banksy-flower-thrower-jerusalem.jpg",
+  "«Метатель цветов» на стене гаража в Вифлееме, 2003")
+</p>
+<p>
+  В 2005 году Бэнкси нанес девять трафаретных рисунков на эту стену.
+  Среди них — <strong>«Улетающая девочка»</strong>
+  (<strong>«Flying Balloon Girl»</strong>).
+  Он поделился историей, как проходящий мимо пожилой палестинец сказал,
+  что его работа сделала стену красивой. Бэнкси поблагодарил его,
+  и палестинец продолжил: «Мы не хотим, чтобы она была красивой,
+  мы ненавидим эту стену. Уходите домой».
+</p>
+<p>
+  @image_described(Days, "banksy-flying-ballon-girl-westbank-wall.jpg",
+  "«Улетающая девочка» на израильском разделительном барьере. " +
+  "Западный берег реки Иордан, 2005")
+</p>
+<section>
+  <h4 class="text-center caption-top">Смотрите также</h4>
+  <p>
+    @weblink("https://www.google.com/maps/@31.7043865,35.2272456,3a,82.2y,270.22h,101.61t/data=!3m7!1e1!3m5!1sAF1QipObbAPJe1DSYFxaHDDuMkpU6QDGnxrXhY3B-cw!2e10!3e12!7i10240!8i5120",
+    "Мурал «Любовь витает в воздухе» на Гугл-карте")
+  </p>
+  <p>
+    @humanity_icon() @link(Days.href + "#years", "Мирные истории") — все записи
+  </p>
+    @humanity_icon_credits()
+</section>
+
+@*
+love is in the air
+https://banksyexplained.com/love-is-in-the-air/
+https://publicdelivery.org/banksy-flower-thrower/
+
+https://www.myartbroker.com/artist-banksy/10-facts/10-facts-about-banksys-love-is-in-the-air
+*@
+
+@*
+//West bank graffiti
+https://en.wikipedia.org/wiki/West_Bank_Wall_graffiti_art
+https://www.thecrimson.com/column/the-art-of-protest/article/2014/3/26/the-art-of-protest-banksy/
+*@

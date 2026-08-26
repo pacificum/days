@@ -1,0 +1,20 @@
+@(dir: AssetDir,
+  fname: String,
+  style: ImgStyle = ImgStyle.Normal,
+  width: Int = 0,
+  height: Int = 0
+)
+<img src="@Files.at(dir, fname)" class="@{
+    val presets = "img-responsive center-block img-fluid mx-auto d-block"
+    style match {
+      case ImgStyle.Wide => presets
+      case ImgStyle.Normal => presets + " image-top image-bottom"
+      case ImgStyle.Described => presets + " image-top described-image-bottom"
+      case ImgStyle.Left => "left"
+      case ImgStyle.Right => "right"
+      case ImgStyle.Custom(customCss) => customCss
+      case _ => ""
+    }
+}"
+@*title="@title"@if(title != ""){ alt="@title"}*@
+@if(width > 0){ width="@width"}@if(height > 0){ height="@height"}/>

@@ -1,0 +1,2 @@
+@(ref: String = "pacificum@duck.com", icon: Boolean = false)
+@if(!icon){@link("mailto:" + ref, ref, classExt = "hoverline")} else {@iconlink("mailto:" + ref, ref, classExt = "hoverline"){ <span class="fa fa-envelope small"></span>}}

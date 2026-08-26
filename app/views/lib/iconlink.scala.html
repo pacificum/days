@@ -1,0 +1,3 @@
+@(href: String, text: String = "", classExt: String = "dotted", blank: Boolean = false)(icon: Html)
+@import light.util.GrammarHelper._
+<a href="@href"@if(blank){ target="_blank"}><span class="text-nowrap">@icon&nbsp;<span class="@classExt">@if(text != "") {@head(text)} else {@linkText(href)}</span></span>@if(text != "" && tail(text) != "") {<span class="@classExt"> @tail(text)</span>}</a>

@@ -1,0 +1,20 @@
+@import lib._, parts._
+
+@main("Дыхание мира") {
+    @panes {
+        @dayheadcontrol {
+            @logo(width = 345)
+            @header("Дыхание мира", "истории о мире и свободе")
+        }
+        @days.parts._days_fragment()
+        <p class="paragraph"></p>
+        @days.parts._stories_fragment()
+        <section class="indent">
+            <small>
+                <p class="text-center">@dove_icon(IconSize.Small)
+                    dove and &nbsp; @humanity_icon(IconSize.Small) humanity icons created by @extlink("https://www.flaticon.com/free-icons/dove", "justicon - Flaticon")</p>
+            </small>
+        </section>
+        @dayfoot()
+    }
+}

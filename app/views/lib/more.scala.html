@@ -1,0 +1,16 @@
+@(id: String, label: String)(body: Html)
+
+<div class="collapse" id="@id">
+@body
+</div>
+
+
+<button class="btn btn-collapse" type="button"
+        data-toggle="collapse" data-bs-toggle="collapse" data-target="#@id" data-bs-target="#@id"
+        aria-expanded="false" aria-controls="@id" id="@{id}Control">
+  @label <i class="fa fa-angle-double-down"></i>
+</button>
+
+<script type="text/javascript">
+  initCollapse("#@id", "#@{id}Control", "@label")
+</script>

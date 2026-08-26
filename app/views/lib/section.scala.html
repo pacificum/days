@@ -1,0 +1,6 @@
+@(key: String = "", classExt: String = "", row: Boolean = false)(content: Html)
+
+@if(key != ""){<a id="@key"></a>}
+<section @if(classExt != "" || row){class="@classExt @if(row){row}"}>
+@content
+</section>

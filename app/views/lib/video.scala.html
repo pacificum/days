@@ -1,0 +1,5 @@
+@(src: String, lazyLoad: Boolean = false, classExt: String = "")
+
+<div class="ratio ratio-16x9 embed-responsive embed-responsive-16by9 paragraph mb-2 @if(classExt > ""){@classExt}">
+  <iframe class="video" @if(!lazyLoad) {src="@src"} else {src="" data-src="@src"} frameborder="0" allowfullscreen></iframe>
+</div>

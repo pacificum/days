@@ -1,0 +1,1 @@
+@(href: String, imgRef: String, title: String = "", classExt: String = "", external: Boolean = false)<a href="@href"@if(external){ target="_blank"}><img src="@imgRef" title="@title"@if(classExt != ""){ class="@classExt"}/></a>

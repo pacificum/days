@@ -1,0 +1,21 @@
+GET /                              controllers.Default.redirect(to = "/days/")
+
+# Export functionality
+GET /export                       exportsite.ExportController.exportSite(outputDir: Option[String] ?= None)
+
+#GET /google857ab1ee6fdcd496.html controllers.Assets.at(path="/public", file="google857ab1ee6fdcd496.html")
+
+#GET /mariam/                     controllers.Assets.at(path="/public", file="mariam.html")
+
+GET /days/:key/                   controllers.AppRoutes.storiesRecord(key)
+
+GET /days/:key                    controllers.AppRoutes.storiesRedirect(key)
+
+GET /stories/peace_pole           controllers.Default.redirect(to = "/days/peace_pole/")
+
+GET /:page/                       controllers.AppRoutes.page(page)
+
+GET /fonts/*file                  controllers.AppRoutes.font(file)
+
+# Map static resources from the /public folder to the /assets URL path
+GET /assets/*file                 controllers.Assets.at(path="/public", file)

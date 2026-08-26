@@ -1,0 +1,4 @@
+@(icon: Html, indent: Boolean = false)(body: Html)
+<div class="d-table-row">
+  <span class="d-table-cell pe-2 @if(indent){py-3}else{py-1}">@icon</span><span class="d-table-cell @if(indent){py-3}else{py-1}">@body</span>
+</div>

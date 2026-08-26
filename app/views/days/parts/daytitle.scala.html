@@ -1,0 +1,6 @@
+@import light.days.Days
+@(day: DayRecord)
+@import lib._
+
+<p class="sub-header">@link(Days.href, day.subtitle, classExt = "dotted")</p>
+@day.title

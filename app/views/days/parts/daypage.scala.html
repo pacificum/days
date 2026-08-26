@@ -1,0 +1,8 @@
+@(day: DayRecord)
+@import lib._
+@main(day.title){
+    @panes {
+        @day.content
+        @dayfoot()
+    }
+}
